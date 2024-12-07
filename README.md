@@ -4,7 +4,7 @@
 
 Hi, I'm **Matthew Christian Hansel Budhiono** – a passionate **Business Information Technology** student with a diverse skill set that spans across:
 
-- Software Development
+- Software Development 
 - Data Analysis
 - UI/UX Design
 - Business & System Analysis
