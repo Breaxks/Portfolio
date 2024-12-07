@@ -3,14 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -1029,10 +1021,84 @@ Others Styling
 
 
 
-/*-----------------------------------*\
+/*------------------------*\
   #PORTFOLIO
-\*-----------------------------------*/
+\*------------------------*/
 
+.filter-item button {
+  color: var(--light-gray); /* Default color: light gray */
+  background: none;
+  border: none;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  text-transform: capitalize;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: color 0.15s ease-in-out;
+}
+
+.filter-item button:hover {
+  color: var(--jet); /* Hover color: dark gray */
+}
+
+.filter-item button:active,
+.filter-item button:focus {
+  color: var(--orange-yellow-crayola); /* Active color: yellow */
+  outline: none; /* Remove focus outline */
+}
+
+/* 
+======================
+GitHub Button Styling
+======================
+*/
+.github-button {
+  display: inline-flex; /* Ensures the button only takes up the space it needs */
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* Space between the image and text */
+  color: var(--light-gray);
+  background: none;
+  border: none;
+  font-size: var(--fs-6); /* Adjust font size */
+  font-weight: var(--fw-300);
+  text-transform: capitalize;
+  padding: 4px 8px; /* Reduced padding to fit the content */
+  max-width: 185px; /* Set a max width to keep it from becoming too long */
+  margin-top: 10px; /* Space between the title and button */
+  margin-left: auto;
+  margin-right: auto; /* Center the button */
+  transition: 0.2s ease-in-out;
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.github-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+}
+
+.github-logo {
+  width: 16px; /* Reduced logo size */
+  height: 16px;
+}
+
+/* GitHub Title Styling */
+.github-title {
+  text-align: center;
+  margin-top: 30px; /* Add space between the projects and the title */
+  margin-bottom: 15px; /* Space between the title and button */
+}
+
+.github-title h2 {
+  font-size: 2rem; /* Twice as large as the previous size */
+  font-weight: var(--fw-500);
+  color: var(--light-gray);
+  text-transform: capitalize;
+}
+
+/* ================ */
+
+/* Default Layout */
 .filter-list { display: none; }
 
 .filter-select-box {
@@ -1119,6 +1185,8 @@ Others Styling
   overflow: hidden;
   margin-bottom: 15px;
 }
+
+
 
 /* 
 ========
