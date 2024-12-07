@@ -1,7 +1,6 @@
 # Welcome to My GitHub Portfolio 👋
+https://img.shields.io/badge/https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmatthew-chb%2F?logo=LinkedIn&logoColor=%230077B5&color=%23333333
 
-[![LinkedIn](https://www.linkedin.com/in/matthew-chb/)](https://img.shields.io/badge/https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmatthew-chb%2F?logo=LinkedIn&logoColor=%230077B5&color=%23333333
-)
 
 Hi, I'm **Matthew Christian Hansel Budhiono** – a passionate **Business Information Technology** student with a diverse skill set that spans across:
 
