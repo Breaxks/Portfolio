@@ -1,6 +1,6 @@
 # Welcome to My GitHub Portfolio 👋
 
-[LinkedIn](https://www.linkedin.com/in/matthew-chb/)
+![LinkedIn](https://www.linkedin.com/in/matthew-chb/)
 
 Hi, I'm **Matthew Christian Hansel Budhiono** – a passionate **Business Information Technology** student with a diverse skill set that spans across:
 
