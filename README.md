@@ -17,7 +17,7 @@ With over two years of hands-on experience, I've had the opportunity to work on 
 - Machine Learning
 - Web Development
 
-I’m driven by the goal of bridging the gap between technology and business. My aim is to pursue a career as a **Business Analyst** and to contribute to projects that drive meaningful change through tech.
+I’m driven by the goal of bridging the gap between technology and business. My aim is to pursue a career as a **IT Professional** and to contribute to projects that drive meaningful change through tech.
 
 Explore my portfolio to see examples of my work, and feel free to reach out if you'd like to connect or collaborate!
 
