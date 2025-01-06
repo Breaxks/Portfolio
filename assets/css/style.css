@@ -489,6 +489,9 @@ main {
 
 
 
+
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -598,6 +601,624 @@ main {
 .btn + .btn {
   margin-left: 10px; /* Add spacing between buttons */
 }
+
+
+
+
+/**
+============= 
+SLIDE SHOW
+============= **/
+
+.slider-title {
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 5px; /* Optional, to give some space between the title and the slider */
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.wgh-slider {
+  position: relative;
+  top: 55%;
+  width: 100%;
+  height: 100%; /* Match container height */
+  transform: translateY(-50%);
+}
+.wgh-slider__viewport {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.wgh-slider__viewbox {
+  display: block;
+  position: relative;
+  perspective: 100vw;
+  margin: 0 auto;
+  width: 90%; /* Almost full page (adjust as needed) */
+  max-width: none; /* Allow it to scale larger */
+  height: 300px; /* Match the desired image height */
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+.wgh-slider__viewbox::before {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+}
+.wgh-slider__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Stretch to fit */
+  height: auto; /* Ensure it can scale to fit content */
+  transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.3s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-wrap: nowrap; /* Ensure items stay in a row */
+}
+.wgh-slider-target {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input.wgh-slider-target {
+  display: none;
+}
+
+.wgh-slider-target:first-of-type:last-of-type ~ .wgh-slider__viewport .wgh-slider-item:nth-child(1) .wgh-slider-item__trigger {
+  display: none;
+}
+
+.wgh-slider-target:nth-of-type(1):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(0%);
+}
+.wgh-slider-target:nth-of-type(2):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-50%);
+}
+.wgh-slider-target:nth-of-type(3):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-100%);
+}
+.wgh-slider-target:nth-of-type(4):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-150%);
+}
+.wgh-slider-target:nth-of-type(5):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-200%);
+}
+.wgh-slider-target:nth-of-type(6):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-250%);
+}
+.wgh-slider-target:nth-of-type(7):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-300%);
+}
+.wgh-slider-target:nth-of-type(8):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-350%);
+}
+.wgh-slider-target:nth-of-type(9):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-400%);
+}
+.wgh-slider-target:nth-of-type(10):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-450%);
+}
+.wgh-slider-target:nth-of-type(11):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-500%);
+}
+.wgh-slider-target:nth-of-type(12):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-550%);
+}
+.wgh-slider-target:nth-of-type(13):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-600%);
+}
+.wgh-slider-target:nth-of-type(14):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-650%);
+}
+.wgh-slider-target:nth-of-type(15):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-700%);
+}
+.wgh-slider-target:nth-of-type(16):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-750%);
+}
+.wgh-slider-target:nth-of-type(17):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-800%);
+}
+.wgh-slider-target:nth-of-type(18):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-850%);
+}
+.wgh-slider-target:nth-of-type(19):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-900%);
+}
+.wgh-slider-target:nth-of-type(20):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-950%);
+}
+.wgh-slider-target:nth-of-type(21):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1000%);
+}
+.wgh-slider-target:nth-of-type(22):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1050%);
+}
+.wgh-slider-target:nth-of-type(23):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1100%);
+}
+.wgh-slider-target:nth-of-type(24):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1150%);
+}
+.wgh-slider-target:nth-of-type(25):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1200%);
+}
+.wgh-slider-target:nth-of-type(26):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1250%);
+}
+.wgh-slider-target:nth-of-type(27):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1300%);
+}
+.wgh-slider-target:nth-of-type(28):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1350%);
+}
+.wgh-slider-target:nth-of-type(29):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1400%);
+}
+.wgh-slider-target:nth-of-type(30):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1450%);
+}
+.wgh-slider-target:nth-of-type(31):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1500%);
+}
+.wgh-slider-target:nth-of-type(32):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1550%);
+}
+.wgh-slider-target:nth-of-type(33):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1600%);
+}
+.wgh-slider-target:nth-of-type(34):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1650%);
+}
+.wgh-slider-target:nth-of-type(35):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1700%);
+}
+.wgh-slider-target:nth-of-type(36):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1750%);
+}
+.wgh-slider-target:nth-of-type(37):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1800%);
+}
+.wgh-slider-target:nth-of-type(38):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1850%);
+}
+.wgh-slider-target:nth-of-type(39):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1900%);
+}
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider__container {
+  transform: translateX(-1950%);
+}
+
+.wgh-slider-item {
+  display: block;
+  position: absolute; /* If using absolute positioning, make sure it’s working for all slides */
+  z-index: 1;  /* Ensure slides stack in order */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotateY(45deg);
+  transition: transform 0.8s ease-in-out; /* Ensure the transition works with all slide numbers */
+}
+.wgh-slider-item:nth-child(1) {
+  left: 0%;
+}
+.wgh-slider-item:nth-child(2) {
+  left: 50%;
+}
+.wgh-slider-item:nth-child(3) {
+  left: 100%;
+}
+.wgh-slider-item:nth-child(4) {
+  left: 150%;
+}
+.wgh-slider-item:nth-child(5) {
+  left: 200%;
+}
+.wgh-slider-item:nth-child(6) {
+  left: 250%;
+}
+.wgh-slider-item:nth-child(7) {
+  left: 300%;
+}
+.wgh-slider-item:nth-child(8) {
+  left: 350%;
+}
+.wgh-slider-item:nth-child(9) {
+  left: 400%;
+}
+.wgh-slider-item:nth-child(10) {
+  left: 450%;
+}
+.wgh-slider-item:nth-child(11) {
+  left: 500%;
+}
+.wgh-slider-item:nth-child(12) {
+  left: 550%;
+}
+.wgh-slider-item:nth-child(13) {
+  left: 600%;
+}
+.wgh-slider-item:nth-child(14) {
+  left: 650%;
+}
+.wgh-slider-item:nth-child(15) {
+  left: 700%;
+}
+.wgh-slider-item:nth-child(16) {
+  left: 750%;
+}
+.wgh-slider-item:nth-child(17) {
+  left: 800%;
+}
+.wgh-slider-item:nth-child(18) {
+  left: 850%;
+}
+.wgh-slider-item:nth-child(19) {
+  left: 900%;
+}
+.wgh-slider-item:nth-child(20) {
+  left: 950%;
+}
+.wgh-slider-item:nth-child(21) {
+  left: 1000%;
+}
+.wgh-slider-item:nth-child(22) {
+  left: 1050%;
+}
+.wgh-slider-item:nth-child(23) {
+  left: 1100%;
+}
+.wgh-slider-item:nth-child(24) {
+  left: 1150%;
+}
+.wgh-slider-item:nth-child(25) {
+  left: 1200%;
+}
+.wgh-slider-item:nth-child(26) {
+  left: 1250%;
+}
+.wgh-slider-item:nth-child(27) {
+  left: 1300%;
+}
+.wgh-slider-item:nth-child(28) {
+  left: 1350%;
+}
+.wgh-slider-item:nth-child(29) {
+  left: 1400%;
+}
+.wgh-slider-item:nth-child(30) {
+  left: 1450%;
+}
+.wgh-slider-item:nth-child(31) {
+  left: 1500%;
+}
+.wgh-slider-item:nth-child(32) {
+  left: 1550%;
+}
+.wgh-slider-item:nth-child(33) {
+  left: 1600%;
+}
+.wgh-slider-item:nth-child(34) {
+  left: 1650%;
+}
+.wgh-slider-item:nth-child(35) {
+  left: 1700%;
+}
+.wgh-slider-item:nth-child(36) {
+  left: 1750%;
+}
+.wgh-slider-item:nth-child(37) {
+  left: 1800%;
+}
+.wgh-slider-item:nth-child(38) {
+  left: 1850%;
+}
+.wgh-slider-item:nth-child(39) {
+  left: 1900%;
+}
+.wgh-slider-item:nth-child(40) {
+  left: 1950%;
+}
+
+
+.wgh-slider-item__trigger {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  cursor: pointer;
+}
+/* Hide triggers when each slide is checked */
+.wgh-slider-target:nth-of-type(1):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(1) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(2):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(2) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(3):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(3) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(4):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(4) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(5):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(5) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(6):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(6) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(7):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(7) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(8):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(8) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(9):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(9) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(10):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(10) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(11):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(11) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(12):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(12) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(13):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(13) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(14):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(14) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(15):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(15) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(16):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(16) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(17):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(17) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(18):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(18) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(19):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(19) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(20):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(20) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(21):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(21) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(22):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(22) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(23):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(23) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(24):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(24) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(25):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(25) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(26):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(26) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(27):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(27) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(28):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(28) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(29):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(29) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(30):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(30) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(31):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(31) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(32):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(32) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(33):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(33) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(34):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(34) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(35):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(35) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(36):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(36) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(37):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(37) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(38):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(38) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(39):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(39) .wgh-slider-item__trigger,
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) .wgh-slider-item__trigger {
+  display: none;
+}
+
+
+
+.wgh-slider-item__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(0.75);
+  transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0s;
+  z-index: 10;
+}
+.wgh-slider-item__inner::before, .wgh-slider-item__inner::after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.wgh-slider-item__inner::before {
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  right: 24px;
+  z-index: 0;
+  transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.15s;
+  transform: translate(-24px, 12px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.wgh-slider-item__inner::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Remove the background image completely */
+  background-image: none;
+  transition: background-position 0.3s linear;
+  display: none; /* Make sure the background square isn't there */
+}
+
+.wgh-slider-target:nth-of-type(1):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(1) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(2):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(2) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(3):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(3) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(4):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(4) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(5):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(5) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(6):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(6) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(7):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(7) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(8):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(8) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(9):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(9) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(10):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(10) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(11):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(11) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(12):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(12) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(13):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(13) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(14):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(14) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(15):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(15) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(16):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(16) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(17):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(17) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(18):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(18) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(19):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(19) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(20):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(20) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(21):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(21) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(22):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(22) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(23):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(23) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(24):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(24) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(25):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(25) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(26):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(26) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(27):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(27) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(28):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(28) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(29):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(29) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(30):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(30) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(31):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(31) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(32):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(32) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(33):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(33) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(34):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(34) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(35):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(35) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(36):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(36) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(37):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(37) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(38):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(38) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(39):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(39) .wgh-slider-item__inner,
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) .wgh-slider-item__inner {
+  transform: scale(1);
+  transition-delay: 0s;
+}
+
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) .wgh-slider-item__inner::before {
+  transform: translate(24px, -12px);
+}
+
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) .wgh-slider-item__inner::after {
+  background-position: 100% 50%;
+  display: block;
+}
+
+
+.wgh-slider-item-figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.wgh-slider-item-figure__image {
+  position: absolute;
+  display: block;
+  width: 100%;  /* Ensure the image fills the container's width */
+  height: 100%;  /* Ensure the image fills the container's height */
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  object-fit: cover; /* Make sure the image fills the container without distortion */
+}
+
+.wgh-slider-item-figure__caption {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  padding: 24px;
+  background-image: linear-gradient(0deg, #000 0%, transparent 100%);
+  z-index: 2;
+}
+.wgh-slider-item-figure__caption a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.wgh-slider-item-figure__caption span {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.wgh-slider-target:nth-of-type(1):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(1),
+.wgh-slider-target:nth-of-type(2):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(2),
+.wgh-slider-target:nth-of-type(3):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(3),
+.wgh-slider-target:nth-of-type(4):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(4),
+.wgh-slider-target:nth-of-type(5):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(5),
+.wgh-slider-target:nth-of-type(6):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(6),
+.wgh-slider-target:nth-of-type(7):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(7),
+.wgh-slider-target:nth-of-type(8):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(8),
+.wgh-slider-target:nth-of-type(9):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(9),
+.wgh-slider-target:nth-of-type(10):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(10),
+.wgh-slider-target:nth-of-type(11):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(11),
+.wgh-slider-target:nth-of-type(12):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(12),
+.wgh-slider-target:nth-of-type(13):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(13),
+.wgh-slider-target:nth-of-type(14):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(14),
+.wgh-slider-target:nth-of-type(15):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(15),
+.wgh-slider-target:nth-of-type(16):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(16),
+.wgh-slider-target:nth-of-type(17):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(17),
+.wgh-slider-target:nth-of-type(18):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(18),
+.wgh-slider-target:nth-of-type(19):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(19),
+.wgh-slider-target:nth-of-type(20):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(20),
+.wgh-slider-target:nth-of-type(21):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(21),
+.wgh-slider-target:nth-of-type(22):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(22),
+.wgh-slider-target:nth-of-type(23):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(23),
+.wgh-slider-target:nth-of-type(24):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(24),
+.wgh-slider-target:nth-of-type(25):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(25),
+.wgh-slider-target:nth-of-type(26):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(26),
+.wgh-slider-target:nth-of-type(27):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(27),
+.wgh-slider-target:nth-of-type(28):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(28),
+.wgh-slider-target:nth-of-type(29):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(29),
+.wgh-slider-target:nth-of-type(30):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(30),
+.wgh-slider-target:nth-of-type(31):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(31),
+.wgh-slider-target:nth-of-type(32):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(32),
+.wgh-slider-target:nth-of-type(33):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(33),
+.wgh-slider-target:nth-of-type(34):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(34),
+.wgh-slider-target:nth-of-type(35):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(35),
+.wgh-slider-target:nth-of-type(36):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(36),
+.wgh-slider-target:nth-of-type(37):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(37),
+.wgh-slider-target:nth-of-type(38):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(38),
+.wgh-slider-target:nth-of-type(39):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(39),
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) {
+  transform: translate3d(0, 0, 0) rotateY(0deg);
+  z-index: 9999;
+}
+
+.wgh-slider-target:nth-of-type(40):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(40) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(39):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(39) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(38):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(38) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(37):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(37) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(36):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(36) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(35):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(35) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(34):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(34) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(33):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(33) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(32):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(32) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(31):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(31) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(30):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(30) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(29):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(29) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(28):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(28) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(27):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(27) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(26):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(26) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(25):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(25) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(24):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(24) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(23):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(23) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(22):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(22) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(21):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(21) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(20):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(20) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(19):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(19) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(18):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(18) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(17):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(17) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(16):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(16) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(15):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(15) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(14):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(14) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(13):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(13) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(12):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(12) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(11):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(11) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(10):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(10) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(9):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(9) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(8):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(8) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(7):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(7) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(6):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(6) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(5):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(5) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(4):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(4) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(3):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(3) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(2):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(2) ~ .wgh-slider-item,
+.wgh-slider-target:nth-of-type(1):checked ~ .wgh-slider__viewport .wgh-slider-item:nth-child(1) ~ .wgh-slider-item {
+  transform: translate3d(0, 0, 0) rotateY(-45deg) !important;
+}
+
 
 
 
