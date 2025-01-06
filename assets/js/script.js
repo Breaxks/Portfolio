@@ -157,3 +157,61 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// =======================
+const inputs = document.querySelectorAll(".wgh-slider-target");
+
+// Get the index of the checked radio button at the start
+let current = Array.from(inputs).findIndex(input => input.checked);
+
+// If no radio button is checked, set the first one as the default
+if (current === -1) {
+  current = 0;
+  inputs[current].checked = true;
+}
+
+let direction = 1; // 1 for forward, -1 for backward
+
+// Create a function to move to the next slide
+function moveSlide() {
+  // Uncheck current radio button
+  inputs[current].checked = false;
+
+  // Move to the next slide
+  current += direction;
+
+  // If reached the last slide, reset to the first slide
+  if (current === inputs.length) {
+    current = 0;  // Go to the first slide
+  }
+  // If reached the first slide, reset to the last slide
+  else if (current === -1) {
+    current = inputs.length - 1;  // Go to the last slide
+  }
+
+  // Check the new radio button
+  inputs[current].checked = true;
+}
+
+// Start the automatic slideshow
+let intervalId = setInterval(moveSlide, 3000); // Change slides every 1.5 seconds
+
+// Allow manual change via click
+inputs.forEach(input => {
+  input.addEventListener('click', () => {
+    // Stop the current interval when the user clicks
+    clearInterval(intervalId);
+
+    // Set the slide based on the clicked radio button
+    current = Array.from(inputs).indexOf(input);
+    inputs[current].checked = true;
+
+    // Restart the automatic slideshow after 1.5 seconds
+    setTimeout(() => {
+      intervalId = setInterval(moveSlide, 3000); // Restart the interval after click
+    }, 1500); // Wait for 1.5 seconds before continuing
+  });
+});
+
